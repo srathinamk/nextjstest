@@ -1,5 +1,20 @@
+"use client"
+
+import { useEffect, useState } from "react";
+import { ping } from "./actions";
 
 export default function Home() {
+  const [pingResponse, setPingResponse] = useState<string>("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await ping()
+      console.log(`ping: ${response}`);
+      setPingResponse(response);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Animated Background Blobs */}
@@ -18,7 +33,7 @@ export default function Home() {
             Hello World
           </h1>
           <p className="text-white/80 text-xl md:text-2xl font-light animate-fade-in-up mb-12">
-            Welcome to something amazing
+            {pingResponse}
           </p>
           
           {/* Floating Geometric Elements */}
