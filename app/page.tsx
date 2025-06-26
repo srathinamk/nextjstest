@@ -1,103 +1,223 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      {/* Animated Background Blobs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
+        <div className="blob blob-4"></div>
+        <div className="blob blob-5"></div>
+      </div>
+      
+      {/* Main Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="hello-world-text mb-8">
+            Hello World
+          </h1>
+          <p className="text-white/80 text-xl md:text-2xl font-light animate-fade-in-up">
+            Welcome to something amazing
+          </p>
+          <div className="mt-12">
+            <div className="floating-elements">
+              <div className="element element-1"></div>
+              <div className="element element-2"></div>
+              <div className="element element-3"></div>
+              <div className="element element-4"></div>
+              <div className="element element-5"></div>
+              <div className="element element-6"></div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <style jsx>{`
+        .hello-world-text {
+          font-size: clamp(3rem, 8vw, 8rem);
+          font-weight: 800;
+          background: linear-gradient(
+            45deg,
+            #ff6b6b,
+            #4ecdc4,
+            #45b7d1,
+            #96ceb4,
+            #ffeaa7,
+            #dda0dd,
+            #98d8c8
+          );
+          background-size: 300% 300%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradient-shift 4s ease-in-out infinite;
+          text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+          letter-spacing: -0.02em;
+          font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 1s ease-out 0.5s both;
+        }
+
+        .blob {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(40px);
+          mix-blend-mode: multiply;
+          animation: blob-bounce 7s infinite ease-in-out;
+        }
+
+        .blob-1 {
+          top: 10%;
+          left: 10%;
+          width: 300px;
+          height: 300px;
+          background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+          animation-delay: 0s;
+        }
+
+        .blob-2 {
+          top: 20%;
+          right: 10%;
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(45deg, #45b7d1, #96ceb4);
+          animation-delay: 2s;
+        }
+
+        .blob-3 {
+          bottom: 20%;
+          left: 20%;
+          width: 250px;
+          height: 250px;
+          background: linear-gradient(45deg, #ffeaa7, #dda0dd);
+          animation-delay: 4s;
+        }
+
+        .blob-4 {
+          bottom: 10%;
+          right: 20%;
+          width: 180px;
+          height: 180px;
+          background: linear-gradient(45deg, #98d8c8, #ff6b6b);
+          animation-delay: 1s;
+        }
+
+        .blob-5 {
+          top: 50%;
+          left: 50%;
+          width: 320px;
+          height: 320px;
+          background: linear-gradient(45deg, #a8e6cf, #c7ceea);
+          animation-delay: 3s;
+          transform: translate(-50%, -50%);
+        }
+
+        @keyframes blob-bounce {
+          0%, 100% {
+            transform: translate(0px, 0px) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+
+        .floating-sparkles {
+          position: relative;
+          height: 100px;
+        }
+
+        .sparkle {
+          position: absolute;
+          font-size: 1.5rem;
+          animation: float 3s ease-in-out infinite;
+        }
+
+        .sparkle-1 {
+          left: 10%;
+          animation-delay: 0s;
+        }
+
+        .sparkle-2 {
+          left: 30%;
+          animation-delay: 0.5s;
+        }
+
+        .sparkle-3 {
+          left: 50%;
+          animation-delay: 1s;
+        }
+
+        .sparkle-4 {
+          left: 70%;
+          animation-delay: 1.5s;
+        }
+
+        .sparkle-5 {
+          left: 90%;
+          animation-delay: 2s;
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+            opacity: 0.7;
+          }
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+            opacity: 1;
+          }
+        }
+
+        /* Dark mode adjustments */
+        @media (prefers-color-scheme: dark) {
+          .blob {
+            mix-blend-mode: screen;
+            filter: blur(60px);
+          }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+          .blob {
+            filter: blur(30px);
+          }
+          
+          .blob-1, .blob-3, .blob-5 {
+            width: 200px;
+            height: 200px;
+          }
+          
+          .blob-2, .blob-4 {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      `}</style>
     </div>
   );
 }
