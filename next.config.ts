@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    unoptimized: true,
-  },
-  trailingSlash: true,
+  // Remove trailingSlash and unoptimized images for App Hosting
+  // App Hosting handles these better
 };
 
 export default nextConfig;
