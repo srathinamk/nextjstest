@@ -30,7 +30,7 @@ export default function Home() {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
         <div className="text-center">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold mb-8 bg-gradient-to-r from-pink-400 via-cyan-400 via-blue-400 via-emerald-400 via-amber-400 via-violet-400 to-teal-400 bg-clip-text text-transparent animate-gradient bg-[length:300%_300%] tracking-tight font-sans">
-            Hello World
+            Hello there!
           </h1>
           <p className="text-white/80 text-xl md:text-2xl font-light animate-fade-in-up mb-12">
             {pingResponse}
